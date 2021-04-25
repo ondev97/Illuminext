@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media/index-media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media/about-media.css' %}" />
+    <title>Illuminext</title>
+    <script
+    src="https://kit.fontawesome.com/4f6c585cf2.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+    <div class="hero">
+      {% include 'main/nav.html' %}
+      <div class="hesec">
+        <div class="main">
+          <div class="content">
+            <h1>About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- second section -->
+      <div class="second">
+        <div class="main">
+          <div class="column">
+            <div class="pht-frame">
+              <div class="pht">
+                <img src="{% static 'img/asection2.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <h1>Our Story</h1>
+            <div class="cont">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
+                incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
+                incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
+              </p>
+
+            </div>
+            <div class="list">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet consectetur</li>
+                    <li><i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet consectetur</li>
+                    <li><i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet consectetur</li>
+                    <li><i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet consectetur</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- what we offer -->
+      <div class="second inpd">
+        <div class="main fdc">
+          <div class="container">
+            <h1>What We Offer</h1>
+            <div class="rw">
+              <div class="co">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur blanditiis praesentium, placeat dolore sed dolorum
+                  unde officiis. Dolores id, quisquam at cum minima obcaecati
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="blogcard">
+              <div class="blogpib">
+                <img src="{% static 'img/project/pexels-mentatdgt-1311518.jpg' %}" alt="">
+              </div>
+              <div class="cont">
+                <h1>We Understand Requirement</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
+                <a href="#">Learn More 	&#8594;</a>
+              </div>
+            </div>
+            <div class="blogcard">
+              <div class="blogpib">
+                <img src="{% static 'img/project/pexels-mentatdgt-2173508.jpg' %}" alt="">
+              </div>
+              <div class="cont">
+                <h1>We Understand Requirement</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
+                <a href="#">Learn More 	&#8594;</a>
+              </div>
+            </div>
+            <div class="blogcard">
+              <div class="blogpib">
+                <img src="{% static 'img/project/pexels-cottonbro-4101143.jpg' %}" alt="">
+              </div>
+              <div class="cont">
+                <h1>We Understand Requirement</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
+                <a href="#">Learn More 	&#8594;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="second ckas">
+        <div class="cover">
+          <div class="content">
+            <h1>Get Your Free Consultation</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              consequuntur similique voluptates esse repellat veniam
+            </p>
+            <button>
+              Book An Appointment <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {% include 'main/footer.html' %}
+  </body>
+</html>

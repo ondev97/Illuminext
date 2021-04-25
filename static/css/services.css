@@ -1,0 +1,181 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --main-color: #ff5e14;
+  --hover-txt-color-2: #fff;
+}
+.hero {
+  padding: 180px 0;
+  background-image: url("../img/services.jpg");
+}
+.second .smain {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: var(--main-font);
+}
+.second .smain h1 {
+  font-size: 35px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 30px;
+}
+.second .smain h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100px;
+  height: 5px;
+  background-color: var(--main-color);
+}
+.second .smain p {
+  font-size: 15px;
+  color: #777;
+  line-height: 30px;
+}
+.second .smain .cont-grid {
+  width: 100%;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-around;
+}
+.second .smain .cont-grid .column {
+  flex-basis: 300px;
+  min-height: 350px;
+  padding: 10px 20px;
+  border: 2px solid #dadada;
+  display: initial;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #dadada;
+  transition: 0.5s ease-in;
+}
+.second .smain .cont-grid .column h1 {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.second .smain .cont-grid .column h1::after {
+  height: 2px;
+  width: 100%;
+}
+.second .smain .cont-grid .column:hover {
+  box-shadow: 0px 0px 18px #b3b3b3;
+}
+
+/*recent projects*/
+.second.bgc {
+  background-color: #f4f8fd;
+}
+.second .recont {
+  width: 1200px;
+  margin: 0 auto 50px;
+  font-family: var(--main-font);
+}
+.second .recont h1 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 35px;
+  position: relative;
+}
+.second .recont p {
+  color: #777;
+}
+.second .seredi {
+  align-items: center;
+  margin-bottom: 100px;
+}
+.second .seredi .column .pht-frame {
+  position: relative;
+}
+.second .seredi .column .pht-frame .boxpht {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 40px;
+}
+.second .seredi .column .pht-frame .boxpht p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.second .seredi .column .pht-frame .boxpht .botrow {
+  padding: 20px 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.second .seredi .column .pht-frame .boxpht .botrow .uspic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.second .seredi .column .pht-frame .boxpht .botrow .uspic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.second .seredi .column .pht-frame .boxpht .botrow .detpic {
+  margin-left: 8px;
+  color: #777;
+  font-weight: 400;
+}
+.second .seredi .column .pht-frame .boxpht .botrow .detpic h2 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.second .seredi .column .pht-frame .boxpht .botrow .detpic h3 {
+  font-size: 10px;
+}
+.second .seredi .column h1 {
+  position: relative;
+}
+.second .seredi .column h1::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  background-color: var(--main-color);
+}
+.second .seredi .column p {
+  margin: 0;
+  font-size: 13px;
+  color: #000;
+  margin-top: 20px;
+}
+.second .seredi .column .cont {
+  margin-bottom: 10px;
+}
+.second .seredi .column .cont p {
+  font-size: 15px;
+  color: #777;
+}
+.second .seredi .column .recelist ul {
+  list-style: none;
+}
+.second .seredi .column .recelist ul li {
+  margin-bottom: 10px;
+  color: #777;
+}
+.second .seredi .column .recelist ul li i {
+  color: var(--main-color);
+  transform: rotateZ(90deg);
+  margin-right: 10px;
+}
+.second .seredi .column .recelist button {
+  margin-top: 15px;
+  width: 150px;
+  padding: 15px 0;
+  background-color: var(--main-color);
+  border: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}

@@ -1,0 +1,15 @@
+.inpd {
+  padding-top: 100px;
+}
+.inpd .blog {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inpd .blog .blogcard {
+  flex: initial;
+  flex-basis: 380px;
+  margin: 15px 10px;
+  border: 1px solid #777;
+  border-radius: 3px;
+  overflow: hidden;
+}

@@ -1,0 +1,45 @@
+{% load static %}
+<footer>
+      <div class="main">
+        <div class="column">
+          <img src="{% static 'img/logo1.png' %}" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            voluptatem dolore, labore voluptatibus vel, repudiandae
+          </p>
+        </div>
+        <div class="column">
+          <h2>Contact Details</h2>
+          <ul>
+            <a href="#"
+              ><li><i class="fab fa-facebook-f"></i></li
+            ></a>
+            <a href="#"
+              ><li><i class="fab fa-twitter"></i></li
+            ></a>
+            <a href="#"
+              ><li><i class="fab fa-instagram"></i></li
+            ></a>
+          </ul>
+          <p><i class="fas fa-phone"></i> 055-22XXXXX</p>
+        </div>
+        <div class="column">
+          <h2>Our Company</h2>
+          <ul>
+            <a href="{% url 'home' %}"><li>Home</li></a
+            ><a href="{% url 'about' %}"><li>About Us</li></a
+            ><a href="{% url 'contact' %}"><li>Contact Us</li></a
+            ><a href="{% url 'services' %}"><li>Services</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="smfooter">
+        <div class="main">
+          <p>Copyright © 2021 Illumiext Coaching</p>
+          <p>Powered by Helamid</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/counter.js' %}"></script>
+    <script src="{% static 'js/hammenu.js' %}"></script>

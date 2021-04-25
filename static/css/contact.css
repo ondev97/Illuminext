@@ -1,0 +1,219 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --main-color: #ff5e14;
+  --hover-txt-color-2: #fff;
+}
+.hero {
+  padding: 180px 0;
+  background-image: url("../img/contact.jpg");
+}
+.hero::after {
+  opacity: 0.5;
+}
+
+/*contact form*/
+.contact-sec {
+  width: 100%;
+  font-family: var(--main-font);
+  background: linear-gradient(
+    180deg,
+    #f4f8fd 40%,
+    transparent 40%,
+    transparent
+  );
+  padding: 150px 0;
+}
+.contact-sec .main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.contact-sec .main .chead {
+  margin-bottom: 55px;
+}
+.contact-sec .main .chead h1 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.contact-sec .main .chead h1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: var(--main-color);
+  bottom: -3px;
+  left: 0;
+}
+.contact-sec .main .chead p {
+  font-size: 15px;
+}
+.contact-sec .main .cbody {
+  display: flex;
+}
+.contact-sec .main .cbody .column {
+  flex: 0.5;
+  background-color: #fff;
+  border: 1px solid #eee;
+  background-color: #fdfdfde8;
+  padding: 45px 35px;
+}
+.contact-sec .main .cbody .column:nth-child(2) {
+  background-color: #fff;
+}
+.contact-sec .main .cbody .column h1 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+.contact-sec .main .cbody .column form {
+  width: 100%;
+}
+.contact-sec .main .cbody .column form .sub {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+}
+.contact-sec .main .cbody .column form .sub input {
+  width: 50%;
+  padding: 15px 5px;
+}
+
+.contact-sec .main .cbody .column form .sub input:first-child {
+  margin-right: 8px;
+}
+.contact-sec .main .cbody .column form input {
+  width: 100%;
+  padding: 15px 5px;
+}
+.contact-sec .main .cbody .column form textarea {
+  width: 100%;
+  padding: 15px 5px;
+  margin-top: 15px;
+  height: 150px;
+}
+.contact-sec .main .cbody .column form input,
+textarea {
+  border: 1px solid #dadada;
+  outline: none;
+  border-radius: 3px;
+  transition: border-color 0.5s ease-in, color 0.5s ease-in;
+  font-weight: 600;
+}
+.contact-sec .main .cbody .column form input:focus,
+textarea:focus {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: 600;
+}
+.contact-sec .main .cbody .column form label {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.contact-sec .main .cbody .column form .radio {
+  width: 100%;
+  margin-top: 25px;
+}
+.contact-sec .main .cbody .column form .radio input {
+  display: inline-block;
+  width: auto;
+}
+.contact-sec .main .cbody .column form .radio .sec {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contact-sec .main .cbody .column form .radio .sec label {
+  margin-top: 0;
+  color: #000;
+  font-size: 13px;
+  font-weight: normal;
+}
+.contact-sec .main .cbody .column form .radio .sec input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.contact-sec .main .cbody .column form button {
+  width: 130px;
+  padding: 12px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: #fff;
+  margin-top: 25px;
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+.contact-sec .main .cbody .column form button:hover {
+  background-color: #ec5711;
+}
+
+.contact-sec .main .cbody .column .c-grid {
+  width: 100%;
+}
+.contact-sec .main .cbody .column .c-grid .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact-sec .main .cbody .column .c-grid .col {
+  width: 100%;
+  flex: 0.5;
+  margin-bottom: 45px;
+  display: flex;
+}
+.contact-sec .main .cbody .column .c-grid .col .icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe4d9;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.contact-sec .main .cbody .column .c-grid .col .icon i {
+  color: var(--main-color);
+}
+.contact-sec .main .cbody .column .c-grid .col .cont {
+  flex: 1;
+}
+.contact-sec .main .cbody .column .c-grid .col .cont h2 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+.contact-sec .main .cbody .column .c-grid .col .cont p {
+  font-size: 15px;
+}
+.contact-sec .main .cbody .column .flw {
+  width: 100%;
+}
+.contact-sec .main .cbody .column .flw ul {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-sec .main .cbody .column .flw ul li {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.contact-sec .main .cbody .column .flw ul li i {
+  color: #fff;
+  font-size: 20px;
+}
+.contact-sec .main .cbody .column .flw ul li:hover {
+  box-shadow: 0px 0px 8px var(--main-color);
+}

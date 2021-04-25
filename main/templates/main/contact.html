@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illumiext</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media/index-media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media/contact-media.css' %}" />
+
+    <script
+      src="https://kit.fontawesome.com/4f6c585cf2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="hero">
+      {% include 'main/nav.html' %}
+      <div class="hesec">
+        <div class="main">
+          <div class="content">
+            <h1>Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-sec">
+      <div class="main">
+        <div class="chead">
+          <h1>Get In Touch</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt eaque
+            est pariatur minima voluptates eius
+          </p>
+        </div>
+        <div class="cbody">
+          <div class="column">
+            <h1>Send Us A Message</h1>
+            <form>
+              <div class="sub">
+                <input type="text" name="name" placeholder="Name" autofocus />
+                <input type="text" name="email" placeholder="Email" />
+              </div>
+              <div class="sub">
+                <input
+                  type="text"
+                  name="org"
+                  placeholder="Organization (Optional)"
+                />
+                <input
+                  type="text"
+                  name="phonenumber"
+                  placeholder="Mobile (Optional)"
+                />
+              </div>
+              <input type="text" name="subject" placeholder="Subject" />
+              <textarea
+                name="message"
+                id="msg"
+                placeholder="Message"
+              ></textarea>
+              <label for="">I am interrested in...</label>
+              <label for="">Tick all That appplies</label>
+              <div class="radio">
+                <div class="sec">
+                  <input
+                    type="checkbox"
+                    name="one"
+                    value="one-on-one Session"
+                    id="one"
+                  />
+                  <label for="one">one-on-one Session</label>
+                </div>
+                <div class="sec">
+                  <input
+                    type="checkbox"
+                    name="two"
+                    value="IllumiNext Student Program - Group Coaching Package"
+                    id="two"
+                  />
+                  <label for="two"
+                    >IllumiNext Student Program - Group Coaching Package</label
+                  >
+                </div>
+                <div class="sec">
+                  <input
+                    type="checkbox"
+                    name="one"
+                    value="IllumiNext Women Program - Group Coaching Package"
+                    id="three"
+                  />
+                  <label for="three"
+                    >IllumiNext Women Program - Group Coaching Package</label
+                  >
+                </div>
+              </div>
+              <button>Contact Us</button>
+            </form>
+          </div>
+          <div class="column">
+            <h1>Contact Info</h1>
+            <div class="c-grid">
+              <div class="row">
+                <div class="col">
+                  <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                  <div class="cont">
+                    <h2>Call Us</h2>
+                    <p>055-22XXXXX</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="icon"><i class="fas fa-thumbtack"></i></div>
+                  <div class="cont">
+                    <h2>Website</h2>
+                    <p>www.illuminextcoaching.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="icon"><i class="fas fa-envelope"></i></div>
+                  <div class="cont">
+                    <h2>Our Email</h2>
+                    <p>info@Illumiextcoaching.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flw">
+              <h1>Follow Us</h1>
+              <ul>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include 'main/footer.html' %}
+  </body>
+</html>
