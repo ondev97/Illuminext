@@ -29,34 +29,6 @@ class Team(models.Model):
     image = models.ImageField
     description = models.TextField
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Service(models.Model):
     title = models.CharField(max_length=500,null=True,blank=True)
     content = models.TextField
