@@ -22,6 +22,14 @@ class Client_section(models.Model):
     pass
 
 
+class Team(models.Model):
+    title = models.CharField(max_length=500,null=True,blank=True)
+    name = models.CharField(max_length=500,null=True,blank=True)
+    post = models.CharField(max_length=500,null=True,blank=True)
+    image = models.ImageField
+    description = models.TextField
+
+
 
 
 
