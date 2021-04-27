@@ -16,3 +16,8 @@ def contacts(request):
 
 def services(request):
     return render(request,template_name='main/services.html')
+
+def contactform(request):
+    if request.method == 'POST':
+        name = request.get('name')
+        email = request.get('email')

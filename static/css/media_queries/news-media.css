@@ -1,0 +1,10 @@
+@media screen and (max-width: 1000px) {
+  .bloger .main {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .inpd .blog .blogcard {
+    flex-basis: initial;
+  }
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 500px) {
+  .second .seredi .column .pht-frame .boxpht {
+    padding: 15px;
+  }
+  .second .column {
+    width: 100%;
+    flex-basis: initial;
+  }
+  .second .seredi .column .pht-frame .boxpht p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .second .seredi .column .pht-frame .boxpht .botrow {
+    flex-direction: column;
+  }
+  .second .seredi .column .pht-frame .boxpht p {
+    font-size: 12px;
+  }
+  .second .seredi .column .pht-frame .boxpht {
+    padding: 10px;
+  }
+}

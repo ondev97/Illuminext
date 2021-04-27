@@ -1,0 +1,198 @@
+@media screen and (max-width: 1300px) {
+  .second .main {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  .second .column:nth-child(1) {
+    flex: 1;
+    margin-right: 65px;
+  }
+  .clientsaysec .main {
+    width: 90%;
+  }
+  .second .mainwor .ro .column {
+    margin: 0;
+  }
+  footer .main {
+    width: 95%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .main .column {
+    margin-bottom: 20px;
+  }
+  .hero .hesec .main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .counter .main {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .second .mainwor .ro {
+    flex-direction: column;
+  }
+  .second .mainwor .ro .column {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 950px) {
+  .second .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second .column:nth-child(1) {
+    flex: 1;
+    margin-right: 0;
+    margin-bottom: 65px;
+  }
+  .cover .content {
+    width: 90%;
+  }
+  .clientsaysec .main {
+    flex-direction: column;
+  }
+  .clientsaysec .main .main-column .card .pic {
+    height: initial;
+  }
+  .second .main .container .rw .co {
+    flex: 0.8;
+    margin-bottom: 8px;
+  }
+  .second .fdc .team .colu {
+    flex-direction: column;
+  }
+  .second .fdc .team .colu .social ul {
+    width: 80%;
+    justify-content: space-evenly;
+  }
+  .second .fdc .team .colu .teamimg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 794px) {
+  nav .menu {
+    display: none;
+  }
+  nav .mobmenu {
+    display: block;
+  }
+  .hero .hesec .main .content {
+    text-align: center;
+    width: 450px;
+  }
+  .second .column .pht-frame {
+    width: 100%;
+  }
+  .second .fdc .team {
+    flex-direction: column;
+  }
+  .second .fdc .team .colu {
+    min-height: 50vh;
+  }
+  .counter .main {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  .second .smgrid .sec {
+    flex-direction: column;
+  }
+  .second .smgrid .sec .column {
+    text-align: center;
+  }
+  .second .smgrid .sec .column .icon {
+    float: initial;
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  .second .smgrid .sec .column .cont p {
+    text-align: center;
+  }
+  .second .column:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .second .smgrid .sec {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .hesec .main .content {
+    width: 100%;
+  }
+  .hero .hesec h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .second .column {
+    width: 90%;
+  }
+  .second .column .pht-frame {
+    padding: 15px;
+    height: auto;
+  }
+  .second .column .pht-frame .pht {
+    margin: 0;
+  }
+  .clientsaysec .main .main-column .card {
+    flex-direction: column;
+  }
+  .second .mainwor .ro .column {
+    flex-direction: column;
+  }
+  .second .mainwor .ro .column .section {
+    width: 100%;
+  }
+  .second .mainwor .ro .column {
+    width: 100%;
+  }
+  .second .main .container .rw {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .counter .main {
+    flex-direction: column;
+  }
+  .counter .main .column {
+    border: none;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .cover .content h1 {
+    font-size: 30px;
+  }
+  .cover .content button {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .clientsaysec .main .main-column .card .cardcont {
+    padding: 15px;
+  }
+  .clientsaysec .main .main-column .card .cardcont h3 {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .second .mainwor .ro .column .section h1 {
+    font-size: 80px;
+  }
+  .second .mainwor .ro .column .section h2 {
+    font-size: 20px;
+  }
+  .second .mainwor .ro .column .section {
+    padding: 150px 0;
+  }
+}
+@media screen and (max-width: 260px) {
+  .hero .hesec .buts button {
+    width: 150px;
+  }
+  .cover .content h1 {
+    word-break: break-all;
+  }
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 1200px) {
+  .inpd .blog {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 920px) {
+  .inpd .blog {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inpd .blog .blogcard {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .inpd .blog .blogcard .cont h1 {
+    font-size: 20px;
+  }
+  .inpd .blog .blogcard .cont p {
+    font-size: 13px;
+  }
+  .inpd .blog .blogcard .cont a {
+    font-size: 13px;
+  }
+}
