@@ -506,24 +506,7 @@ a:nth-child(8) li:hover {
   margin-bottom: 0;
   font-size: 28px;
 }
-.second .mainwor .ro:nth-child(1) .column:nth-child(1) .section:nth-child(1) {
-  background-image: url(../img/project/pexels-cottonbro-4098205.jpg);
-}
-.second .mainwor .ro:nth-child(1) .column:nth-child(2) .section:nth-child(1) {
-  background-image: url(../img/project/pexels-cottonbro-4098224.jpg);
-}
-.second .mainwor .ro:nth-child(1) .column:nth-child(3) .section:nth-child(1) {
-  background-image: url(../img/project/pexels-cottonbro-4101143.jpg);
-}
-.second .mainwor .ro:nth-child(1) .column:nth-child(4) .section:nth-child(1) {
-  background-image: url(../img/project/pexels-mentatdgt-1311518.jpg);
-}
-.second .mainwor .ro:nth-child(1) .column:nth-child(5) .section:nth-child(1) {
-  background-image: url(../img/project/pexels-the-coach-space-2977567.jpg);
-}
-.second .mainwor .ro:nth-child(1) .column:nth-child(6) .section:nth-child(1) {
-  background-image: url(../img/project/pexels-mentatdgt-2173508.jpg);
-}
+
 /*our team*/
 .second.nopad {
   padding-bottom: 0;
