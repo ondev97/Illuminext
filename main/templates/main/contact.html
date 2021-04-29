@@ -40,7 +40,8 @@
         <div class="cbody">
           <div class="column">
             <h1>Send Us A Message</h1>
-            <form>
+            <form action="{% url 'success' %}" method="POST">
+                {% csrf_token %}
               <div class="sub">
                 <input type="text" name="name" placeholder="Name" autofocus />
                 <input type="text" name="email" placeholder="Email" />
