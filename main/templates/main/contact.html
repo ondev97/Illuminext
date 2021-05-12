@@ -33,8 +33,7 @@
         <div class="chead">
           <h1>Get In Touch</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt eaque
-            est pariatur minima voluptates eius
+           {{ contact.description }}
           </p>
         </div>
         <div class="cbody">
@@ -110,14 +109,14 @@
                   <div class="icon"><i class="fas fa-phone-alt"></i></div>
                   <div class="cont">
                     <h2>Call Us</h2>
-                    <p>055-22XXXXX</p>
+                    <p>{{ contact.phone_no }}</p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="icon"><i class="fas fa-thumbtack"></i></div>
                   <div class="cont">
                     <h2>Website</h2>
-                    <p>www.illuminextcoaching.com</p>
+                    <p>{{ contact.website_url }}</p>
                   </div>
                 </div>
               </div>
@@ -126,7 +125,7 @@
                   <div class="icon"><i class="fas fa-envelope"></i></div>
                   <div class="cont">
                     <h2>Our Email</h2>
-                    <p>info@Illumiextcoaching.com</p>
+                    <p>{{ contact.email }}</p>
                   </div>
                 </div>
               </div>
@@ -134,9 +133,9 @@
             <div class="flw">
               <h1>Follow Us</h1>
               <ul>
-                <li><i class="fab fa-facebook-f"></i></li>
-                <li><i class="fab fa-twitter"></i></li>
-                <li><i class="fab fa-instagram"></i></li>
+                  <a href="{{ contact.facebook_url }}"><li><i class="fab fa-facebook-f"></i></li></a>
+                  <a href="{{ contact.twitter_url }}"><li><i class="fab fa-twitter"></i></li></a>
+                  <a href="{{ contact.instagram_url }}"><li><i class="fab fa-instagram"></i></li></a>
               </ul>
             </div>
           </div>

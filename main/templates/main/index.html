@@ -56,7 +56,7 @@
         <div class="column">
           <div class="pht-frame">
             <div class="pht">
-              <img src="./img/section2.jpg" alt="" />
+              <img src="{{ welcome.image.url }}" alt="" />
             </div>
           </div>
         </div>
@@ -106,76 +106,32 @@
         <div class="column">
           <div class="pht-frame">
             <div class="pht">
-              <img src="./img/section2.jpg" alt="" />
+              <img src="{{ specialization.image.url }}" alt="" />
             </div>
           </div>
         </div>
         <div class="column">
-          <h1>Our Specialization</h1>
+          <h1>{{ specialization.title }}</h1>
           <div class="cont">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
+              {{ specialization.content }}
             </p>
           </div>
           <div class="smgrid">
             <div class="sec">
+                 {% for spec in specItem %}
               <div class="column">
-                <div class="icon"><i class="far fa-square"></i></div>
+                <div class="icon"><i class="{{ spec.icon }}"></i></div>
                 <div class="cont">
-                  <h3>Architecture</h3>
+                  <h3>{{ spec.title }}</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      {{ spec.content }}
                   </p>
                 </div>
               </div>
-              <div class="column">
-                <div class="icon"><i class="fas fa-edit"></i></div>
-                <div class="cont">
-                  <h3>Landscape Design</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="icon"><i class="fas fa-images"></i></div>
-                <div class="cont">
-                  <h3>Exterior Design</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="icon"><i class="far fa-object-group"></i></div>
-                <div class="cont">
-                  <h3>Site Planning</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="icon"><i class="far fa-hourglass"></i></div>
-                <div class="cont">
-                  <h3>Furniture Design</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  </p>
-                </div>
-              </div>
-              <div class="column">
-                <div class="icon"><i class="far fa-object-ungroup"></i></div>
-                <div class="cont">
-                  <h3>Interior Design</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  </p>
-                </div>
-              </div>
+                {% endfor %}
             </div>
+
           </div>
         </div>
       </div>
@@ -187,27 +143,26 @@
           <div class="content">
             <h1>What Our Clients Say</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consectetur enim repellat odio itaque odit dolore excepturi
-              possimus facilis velit dolorem at aliquam et necessitatibus fugiat
-              laborum cumque, iusto dignissimos expedita.
+                {{ Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Consectetur enim repellat odio itaque odit dolore excepturi
+                        possimus facilis velit dolorem at aliquam et necessitatibus fugiat
+                        laborum cumque, iusto dignissimos expedita.}}
             </p>
           </div>
           <div class="card">
             <div class="pic">
               <img
-                src="./img/people/pexels-andrea-piacquadio-941693.jpg"
+                src="{{ client1.client_image.url }}"
                 alt=""
               />
             </div>
             <div class="cardcont">
               <i class="fas fa-quote-left"></i>
               <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                {{ client1.description |safe }}
               </h3>
-              <h4>Margaret Curtis</h4>
-              <p>Real Estate Developer</p>
+              <h4>{{ client1.client_name }}</h4>
+              <p>{{ client1.client_post }}</p>
             </div>
           </div>
         </div>
@@ -215,32 +170,30 @@
           <div class="card">
             <div class="pic">
               <img
-                src="./img/people/pexels-marcelo-chagas-2005011.jpg"
-                alt=""
+                src="{{ client2.client_image.url }}"
+                alt="image"
               />
             </div>
             <div class="cardcont">
               <i class="fas fa-quote-left"></i>
               <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                  {{ client2.description | safe }}
               </h3>
-              <h4>Margaret Curtis</h4>
-              <p>Real Estate Developer</p>
+              <h4>{{ client2.client_name }}</h4>
+              <p>{{ client2.client_post }}</p>
             </div>
           </div>
           <div class="card">
             <div class="pic">
-              <img src="./img/people/pexels-sound-on-3760856.jpg" alt="" />
+              <img src="{{ client3.client_image.url }}" alt="" />
             </div>
             <div class="cardcont">
               <i class="fas fa-quote-left"></i>
               <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                {{ client3.description | safe }}
               </h3>
-              <h4>Margaret Curtis</h4>
-              <p>Real Estate Developer</p>
+              <h4>{{ client3.client_name }}</h4>
+              <p>{{ client3.client_post }}</p>
             </div>
           </div>
         </div>
@@ -250,13 +203,11 @@
     <div class="second bgcwo">
       <div class="main mbn">
         <div class="container">
-          <h1>Our Recent Projects</h1>
+          <h1>{{ projects.title }}</h1>
           <div class="rw">
             <div class="co">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur blanditiis praesentium, placeat dolore sed dolorum
-                unde officiis. Dolores id, quisquam at cum minima obcaecati
+                  {{ projects.description }}
               </p>
             </div>
             <button>View All projects &#8594;</button>
@@ -265,72 +216,21 @@
       </div>
       <div class="mainwor">
         <div class="ro">
+            {% for pro in projectItem %}
           <div class="column">
             <div
               class="section"
               style="
-                background-image: url(../img/project/pexels-cottonbro-4098205.jpg);
+                background-image: url({{ pro.image.url }});
               "
             >
-              <h1>01.</h1>
-              <h2>A Great Mega Project</h2>
+              <h1></h1>
+              <h2>{{ pro.caption }}</h2>
             </div>
           </div>
+             {% endfor %}
           <div class="column">
-            <div
-              class="section"
-              style="
-                background-image: url(../img/project/pexels-cottonbro-4098224.jpg);
-              "
-            >
-              <h1>02.</h1>
-              <h2>High Tower Building</h2>
-            </div>
-          </div>
-          <div class="column">
-            <div
-              class="section"
-              style="
-                background-image: url(../img/project/pexels-cottonbro-4101143.jpg);
-              "
-            >
-              <h1>03.</h1>
-              <h2>High Tower Building</h2>
-            </div>
-          </div>
-          <div class="column">
-            <div
-              class="section"
-              style="
-                background-image: url(../img/project/pexels-mentatdgt-1311518.jpg);
-              "
-            >
-              <h1>04.</h1>
-              <h2>High Tower Building</h2>
-            </div>
-          </div>
-          <div class="column">
-            <div
-              class="section"
-              style="
-                background-image: url(../img/project/pexels-the-coach-space-2977567.jpg);
-              "
-            >
-              <h1>05.</h1>
-              <h2>High Tower Building</h2>
-            </div>
-          </div>
-          <div class="column">
-            <div
-              class="section"
-              style="
-                background-image: url(../img/project/pexels-mentatdgt-2173508.jpg);
-              "
-            >
-              <h1>06.</h1>
-              <h2>High Tower Building</h2>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -338,13 +238,11 @@
     <div class="second">
       <div class="main fdc">
         <div class="container">
-          <h1>Our Expert team</h1>
+          <h1>{{ team.title }}</h1>
           <div class="rw">
             <div class="co">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur blanditiis praesentium, placeat dolore sed dolorum
-                unde officiis. Dolores id, quisquam at cum minima obcaecati
+               {{ team.description | safe}}
               </p>
             </div>
           </div>
@@ -352,20 +250,13 @@
         <div class="team">
           <div class="colu">
             <div class="teamimg">
-              <img src="./img/people/pexels-sound-on-3760856.jpg" alt="" />
+              <img src="{{ team.image.url }}" alt="" />
             </div>
             <div class="cont">
-              <h1>asdas asda</h1>
-              <h3>Project Leader</h3>
+              <h1>{{ team.name }}</h1>
+              <h3>{{ team.post }}</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-                necessitatibus fuga modi accusamus harum vitae nam? Neque
-                soluta, voluptatibus ipsa nisi sint impedit dolorem reiciendis
-                consectetur reprehenderit, cumque voluptatem corporis? Lorem
-                ipsum, dolor sit amet consectetur adipisicing elit. Minus
-                necessitatibus fuga modi accusamus harum vitae nam? Neque
-                soluta, voluptatibus ipsa nisi sint impedit dolorem reiciendis
-                consectetur reprehenderit, cumque voluptatem corporis?
+                {{ team.description2 | safe }}
               </p>
 
               <div class="social">

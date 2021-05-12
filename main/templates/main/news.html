@@ -37,54 +37,24 @@
             <div class="rw">
               <div class="co">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consectetur blanditiis praesentium, placeat dolore sed dolorum
-                  unde officiis. Dolores id, quisquam at cum minima obcaecati
+                  {{ offer.description }}
                 </p>
               </div>
             </div>
           </div>
           <div class="blog">
+              {% for items in offerItems  %}
             <div class="blogcard">
               <div class="blogpib">
-                <img src="./img/project/pexels-mentatdgt-1311518.jpg" alt="">
+                <img src="{{ items.image.url }}" alt="">
               </div>
               <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="news-more.html">Learn More 	&#8594;</a>
+                <h1>{{ items.title }}</h1>
+                <p>{{ items.description|slice:"100" }}</p>
+                <a href="{% url 'news-more' items.slug %}">Learn More 	&#8594;</a>
               </div>
             </div>
-            <div class="blogcard">
-              <div class="blogpib">
-                <img src="./img/project/pexels-mentatdgt-2173508.jpg" alt="">
-              </div>
-              <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="news-more.html">Learn More 	&#8594;</a>
-              </div>
-            </div>
-            <div class="blogcard">
-              <div class="blogpib">
-                <img src="./img/project/pexels-cottonbro-4101143.jpg" alt="">
-              </div>
-              <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="news-more.html">Learn More 	&#8594;</a>
-              </div>
-            </div>
-            <div class="blogcard">
-              <div class="blogpib">
-                <img src="./img/project/pexels-cottonbro-4101143.jpg" alt="">
-              </div>
-              <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="news-more.html">Learn More 	&#8594;</a>
-              </div>
-            </div>
+              {% endfor %}
           </div>
         </div>
       </div>

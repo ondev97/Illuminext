@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/about.css" />
-    <link rel="stylesheet" href="/css/news-more.css" />
-    <link rel="stylesheet" href="./css/media/index-media.css" />
-    <link rel="stylesheet" href="./css/media/about-media.css" />
-    <link rel="stylesheet" href="./css/media/news-media.css" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/news-more.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media_queries/index-media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media_queries/about-media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media_queries/news-media.css' %}" />
     <title>Illuminext</title>
     <script
     src="https://kit.fontawesome.com/4f6c585cf2.js"
@@ -18,67 +19,21 @@
   </head>
   <body>
     <div class="hero">
-      <nav>
-        <div class="main">
-          <div class="logo">
-            <img src="./img/logo1.png" alt="" />
-          </div>
-          <div class="menu">
-            <ul>
-              <a href="/index.html"><li>Home</li></a>
-              <a href="/about.html"><li>About</li></a>
-              <a href="/news.html"><li class="activate">News</li></a>
-              <a href="/contact.html"><li>Contact</li></a>
-              <a href="/services.html"><li>Services</li></a>
-              <a href="#"
-                ><li>
-                  <i class="fab fa-facebook-f"></i>
-                </li>
-              </a>
-              <a href="#"
-                ><li>
-                  <i class="fab fa-twitter"></i>
-                </li>
-              </a>
-              <a href="#">
-                <li>
-                  <i class="fab fa-instagram"></i>
-                </li>
-              </a>
-            </ul>
-          </div>
-          <div class="mobmenu">
-            <button id="bars">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="conte ncc" id="conte">
-              <ul>
-                <a href="/index.html"><li>Home</li></a>
-                <a href="/about.html"><li>About</li></a>
-                <a href="/news.html"><li class="activate">News</li></a>
-                <a href="/contact.html"><li>Contact</li></a>
-                <a href="/services.html"><li>Services</li></a>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {% include 'main/nav.html' %}
     </div>
 
         <div class="bloger">
             <div class="main">
                 <div class="blogcover">
-                    <img src="./img/project/pexels-mentatdgt-1311518.jpg" alt="">
+                    <img src="{{ post.image.url }}" alt="">
                 </div>
                 <div class="cont">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque </h1>
+                    <h1>{{ post.title }} </h1>
                     <div class="date">
                         12th december 2021
                     </div>
                     <div class="blogbody">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis saepe voluptatibus voluptatum nisi, suscipit ratione commodi nulla labore quisquam ipsam, illum ad, adipisci dolores? Doloribus officia sapiente a eius. Provident.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis saepe voluptatibus voluptatum nisi, suscipit ratione commodi nulla labore quisquam ipsam, illum ad, adipisci dolores? Doloribus officia sapiente a eius. Provident.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis saepe voluptatibus voluptatum nisi, suscipit ratione commodi nulla labore quisquam ipsam, illum ad, adipisci dolores? Doloribus officia sapiente a eius. Provident.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis saepe voluptatibus voluptatum nisi, suscipit ratione commodi nulla labore quisquam ipsam, illum ad, adipisci dolores? Doloribus officia sapiente a eius. Provident.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis saepe voluptatibus voluptatum nisi, suscipit ratione commodi nulla labore quisquam ipsam, illum ad, adipisci dolores? Doloribus officia sapiente a eius. Provident.</p>
+                        <p> {{ post.description|safe }} </p>
                     </div>
                 </div>
             </div>
@@ -144,51 +99,6 @@
             </div>
           </div>
 
-      <footer class="ab">
-        <div class="main">
-          <div class="column">
-            <img src="./img/logo1.png" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              voluptatem dolore, labore voluptatibus vel, repudiandae
-            </p>
-          </div>
-          <div class="column">
-            <h2>Contact Details</h2>
-            <ul>
-              <a href="#"
-                ><li><i class="fab fa-facebook-f"></i></li
-              ></a>
-              <a href="#"
-                ><li><i class="fab fa-twitter"></i></li
-              ></a>
-              <a href="#"
-                ><li><i class="fab fa-instagram"></i></li
-              ></a>
-            </ul>
-            <p><i class="fas fa-phone"></i> 055-22XXXXX</p>
-          </div>
-          <div class="column">
-            <h2>Our Company</h2>
-            <ul>
-              <a href="/index.html"><li>Home</li></a
-              ><a href="/about.html"><li>About Us</li></a
-              ><a href="/contact.html"><li>Contact Us</li></a
-              ><a href="/services.html"><li>Services</li></a>
-            </ul>
-          </div>
-        </div>
-        <div class="smfooter">
-          <div class="main">
-            <p>Copyright © 2021 Illumiext</p>
-          <p>Powered by Helamid</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <script src="./js/counter.js"></script>
-    <script src="./js/hammenu.js"></script>
-
+      {% include 'main/footer.html' %}
   </body>
 </html>

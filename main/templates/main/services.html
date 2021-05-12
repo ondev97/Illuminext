@@ -39,38 +39,30 @@
         <div class="column">
           <div class="pht-frame">
             <div class="pht">
-              <img src="./img/asection2.jpg" alt="" />
+              <img src="{{ item1.image.url }}" alt="" />
             </div>
             <div class="boxpht">
               <p>
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-                accusantium blanditiis tempora beatae iure optio error, aut
-                ducimus hic, reprehenderit officia tenetur? Suscipit hic unde
-                corrupti sunt magni iure recusandae!"
+                  {{ item1.image_description|safe }}
               </p>
               <div class="botrow">
                 <div class="uspic">
-                  <img src="./img/people/pexels-sound-on-3760856.jpg" alt="" />
+                  <img src="{{item1.client_image.url}}" alt="" />
                 </div>
                 <div class="detpic">
-                  <h2>Jhone Doe</h2>
-                  <h3>CEO At NY Water Park</h3>
+                  <h2>{{ item1.client_name }}</h2>
+                  <h3>{{ item1.project_name }}</h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="column">
-          <p>Commercial Properties</p>
-          <h1>NY Water Park​</h1>
+          <p>{{ item1.client_name }}</p>
+          <h1>{{ item1.project_name }}</h1>
           <div class="cont">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
+              {{ item1.description|safe }}
             </p>
           </div>
           <div class="recelist">
@@ -101,16 +93,11 @@
       <div class="main seredi">
         <!-- recent projects -->
         <div class="column">
-          <p>Commercial Properties</p>
-          <h1>Sky Tail Tower</h1>
+          <p>{{ item2.client_name }}</p>
+          <h1>{{ item2.project_name }}</h1>
           <div class="cont">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
+                {{ item2.description | safe }}
             </p>
           </div>
           <div class="recelist">
@@ -140,25 +127,22 @@
         <div class="column">
           <div class="pht-frame">
             <div class="pht">
-              <img src="./img/asection2.jpg" alt="" />
+              <img src="{{ item2.image.url }}" alt="" />
             </div>
             <div class="boxpht">
               <p>
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-                accusantium blanditiis tempora beatae iure optio error, aut
-                ducimus hic, reprehenderit officia tenetur? Suscipit hic unde
-                corrupti sunt magni iure recusandae!"
+               {{ item2.image_description|safe }}
               </p>
               <div class="botrow">
                 <div class="uspic">
                   <img
-                    src="./img/people/pexels-andrea-piacquadio-941693.jpg"
+                    src="{{ item2.client_image.url }}"
                     alt=""
                   />
                 </div>
                 <div class="detpic">
-                  <h2>Jhone Doe</h2>
-                  <h3>CEO At NY Water Park</h3>
+                  <h2>{{ item2.client_name }}</h2>
+                  <h3>{{ item2.project_name }}</h3>
                 </div>
               </div>
             </div>
@@ -170,41 +154,33 @@
         <div class="column">
           <div class="pht-frame">
             <div class="pht">
-              <img src="./img/asection2.jpg" alt="" />
+              <img src="{{ item3.image.url }}" alt="" />
             </div>
             <div class="boxpht">
               <p>
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-                accusantium blanditiis tempora beatae iure optio error, aut
-                ducimus hic, reprehenderit officia tenetur? Suscipit hic unde
-                corrupti sunt magni iure recusandae!"
+                {{ item3.image_description | safe }}
               </p>
               <div class="botrow">
                 <div class="uspic">
                   <img
-                    src="./img/people/pexels-marcelo-chagas-2005011.jpg"
+                    src="{{ item3.client_image.url }}"
                     alt=""
                   />
                 </div>
                 <div class="detpic">
-                  <h2>Margaret Curtis</h2>
-                  <h3>Margaret Curtis</h3>
+                  <h2>{{ item3.client_name }}</h2>
+                  <h3>{{ item3.project_name }}</h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="column">
-          <p>Real Estate</p>
-          <h1>Reinstate West Project​​</h1>
+          <p>{{ item3.client_name }}</p>
+          <h1>{{ item3.project_name }}</h1>
           <div class="cont">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quo explicabo vero. Quisquam quidem sunt nam ducimus, corporis
-              incidunt repudiandae rem, doloribus voluptate saepe nostrum harum
+              {{ item3.description | safe }}
             </p>
           </div>
           <div class="recelist">
