@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'ckeditor',
+    'admin_reorder'
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,48 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'admin_reorder.middleware.ModelAdminReorder',
 ]
+
+ADMIN_REORDER = (
+    # HomePage
+    {'app': 'main', 'label': 'Homepage',
+     'models': ('main.Welcome',
+                'main.Specialization',
+                'main.SpecializationItem',
+                'main.ClientSection',
+                'main.OurRecentProjects',
+                'main.OurRecentProjectsItem',
+                'main.Team',)
+    },
+    # About Page
+    {'app': 'main', 'label': 'About Us',
+     'models': ('main.OurStory',
+                'main.WhatWeOffer',
+                'main.WhatWeOfferObjects',
+                )
+    },
+
+    # News Page
+
+    {'app': 'main', 'label': 'News Page',
+     'models': ('main.Services_heading',
+                'main.Services',)
+     },
+
+    # Contact Page
+
+{'app': 'main', 'label': 'Contact Info',
+     'models': ('main.ContactInfo',)
+    },
+
+    # Services
+
+{'app': 'main', 'label': 'Services Page',
+     'models': ('main.ClientSection',)
+    },
+)
+
 
 ROOT_URLCONF = 'Illuminextweb.urls'
 
