@@ -1,5 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.core.mail import send_mail
 from .models import (Welcome,
                      Specialization,
                      SpecializationItem,ClientSection,
@@ -43,7 +44,8 @@ def news(request):
 
 def newsmore(request, slug):
     return render(request, template_name='main/news-more.html', context={
-        "post": WhatWeOfferObjects.objects.get(slug=slug)
+        "post": WhatWeOfferObjects.objects.get(slug=slug),
+        "recent": WhatWeOfferObjects.objects.all()[:3]
     })
 
 
@@ -60,7 +62,6 @@ def services(request):
         "item3": Services.objects.get(id=3),
     })
 
-
 def contactform(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -69,7 +70,10 @@ def contactform(request):
         phonenumber = request.POST['phonenumber']
         message = request.POST['message']
         checkbox_one = request.POST['one']
-        # print(checkbox_one,name,email,organization,phonenumber,message)
+        student = request.POST['two']
+        women = request.POST['three']
+        body = "name:- " + name + "\n" + message + "\n" + "Session Type" + checkbox_one,student,women
+        send_mail("Message from Illuminext",body,)
     return HttpResponseRedirect('/contact')
 
 

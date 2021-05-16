@@ -45,36 +45,19 @@
             <h1>Most Recent</h1>
           </div>
           <div class="blog">
+            {% for rec in recent %}
             <div class="blogcard">
               <div class="blogpib">
-                <img src="./img/project/pexels-mentatdgt-1311518.jpg" alt="">
+                <img src="{{ rec.image.url }}" alt="">
               </div>
               <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="#">Learn More 	&#8594;</a>
+                <h1>{{ rec.title }}</h1>
+                  <p>{{ rec.description | safe | slice:"100" }}</p>
+                <a href="{% url 'news-more' rec.slug %}">Learn More 	&#8594;</a>
               </div>
             </div>
-            <div class="blogcard">
-              <div class="blogpib">
-                <img src="./img/project/pexels-mentatdgt-2173508.jpg" alt="">
-              </div>
-              <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="#">Learn More 	&#8594;</a>
-              </div>
-            </div>
-            <div class="blogcard">
-              <div class="blogpib">
-                <img src="./img/project/pexels-cottonbro-4101143.jpg" alt="">
-              </div>
-              <div class="cont">
-                <h1>We Understand Requirement</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias sapiente beatae sequi minus, cumque eligendi in non amet consequatur molestias rem quisquam earum hic harum repudiandae quos neque repellendus.</p>
-                <a href="#">Learn More 	&#8594;</a>
-              </div>
-            </div>
+              {% endfor %}
+
           </div>
         </div>
       </div>
@@ -84,15 +67,15 @@
                 <span>0</span>
                 <p>Clients</p>
               </div>
-              <div class="column" data-count="6500">
+              <div class="column" data-count="100">
                 <span>0</span>
                 <p>Projects</p>
               </div>
-              <div class="column" data-count="6500">
+              <div class="column" data-count="100">
                 <span>0</span>
                 <p>Repairing</p>
               </div>
-              <div class="column" data-count="6500">
+              <div class="column" data-count="6">
                 <span>0</span>
                 <p>Award</p>
               </div>

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from decouple import config
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1osgd513$q^ox#5tfhjtv%e(c@!i$neuu0quuj1*te&mbrk#=w'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG',cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -55,6 +57,7 @@ MIDDLEWARE = [
 
 ADMIN_REORDER = (
     # HomePage
+    {'app':'auth','label':'authorization'},
     {'app': 'main', 'label': 'Homepage',
      'models': ('main.Welcome',
                 'main.Specialization',
@@ -88,7 +91,7 @@ ADMIN_REORDER = (
     # Services
 
 {'app': 'main', 'label': 'Services Page',
-     'models': ('main.ClientSection',)
+     'models': ('main.Services',)
     },
 )
 
@@ -98,7 +101,7 @@ ROOT_URLCONF = 'Illuminextweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'main/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

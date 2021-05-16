@@ -19,6 +19,10 @@ class Welcome(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = "Welcome"
+
+
 
 class Specialization(models.Model):
     title = models.CharField(max_length=300,null=True,blank=True)
@@ -47,6 +51,9 @@ class ClientSection(models.Model):
     def __str__(self):
         return self.client_name
 
+    class Meta:
+        verbose_name_plural = "Client Section"
+
 
 class OurRecentProjects(models.Model):
     title = models.CharField(max_length=600,null=True,blank=True)
@@ -54,6 +61,9 @@ class OurRecentProjects(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name_plural = "Our Recent Project"
 
 class OurRecentProjectsItem(models.Model):
     caption = models.CharField(max_length=300,null=True,blank=True)
@@ -92,13 +102,21 @@ class OurStory(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = "Our Stories"
+
 
 class WhatWeOffer(models.Model):
     description = models.TextField(null=True,blank=True)
 
+    class Meta:
+        verbose_name_plural = "What We Offer"
+
+
 
 def rand_slug():
     return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(6))
+
 
 
 class WhatWeOfferObjects(models.Model):
@@ -106,6 +124,10 @@ class WhatWeOfferObjects(models.Model):
     description = RichTextField(null=True,blank=True)
     image = models.ImageField(null=True,blank=True)
     slug = models.SlugField(max_length=255,unique=True,null=True,blank=True)
+
+    class Meta:
+        verbose_name_plural = "What We Offer Object"
+
 
     def __str__(self):
         return self.title
@@ -125,6 +147,10 @@ class Services_heading(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = "Service Heading"
+
+
 class Services(models.Model):
     client_name = models.CharField(max_length=300,null=True,blank=True)
     project_name = models.CharField(max_length=300,null=True,blank=True)
@@ -135,6 +161,10 @@ class Services(models.Model):
 
     def __str__(self):
         return self.project_name
+
+    class Meta:
+        verbose_name_plural = "Services"
+
 
 
 class ContactInfo(models.Model):
@@ -148,3 +178,7 @@ class ContactInfo(models.Model):
 
     def __str__(self):
         return self.phone_no
+
+
+    class Meta:
+        verbose_name_plural = "Contact Info"
